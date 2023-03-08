@@ -1,0 +1,15 @@
+<extension>
+	<modules>
+		<module>
+			<id>Add export approval tasks in profile toolbar</id>
+			<version>1.0</version>
+			<auto-deploy>true</auto-deploy>
+			<customizations>
+				<customization>
+					<targetPackageRoot>org.alfresco.components.profile</targetPackageRoot>
+					<sourcePackageRoot>es.keensoft.components.profileToolbar</sourcePackageRoot>
+				</customization>
+			</customizations>
+		</module>
+	</modules>
+</extension>

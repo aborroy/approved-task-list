@@ -1,0 +1,7 @@
+<alfresco-config>
+    <config evaluator="string-compare" condition="SitePages">
+        <pages>
+            <page id="approvedTasksList">"approvedTasksList"</page>
+        </pages>
+    </config>
+</alfresco-config>

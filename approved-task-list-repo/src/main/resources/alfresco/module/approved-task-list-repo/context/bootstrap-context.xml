@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="approvedTaskListResourceBundles" class="org.alfresco.i18n.ResourceBundleBootstrapComponent">
+		<property name="resourceBundles">
+			<list>
+				<value>alfresco.module.approved-task-list-repo.messages.CSVApprovedTasksList</value>
+			</list>
+		</property>
+	</bean>
+	
+    <bean id="approved-task-list-repo.groupsLoader"
+          class="org.alfresco.repo.admin.patch.impl.GenericBootstrapPatch"
+          parent="basePatch" >
+        <property name="id"><value>approved-task-list-repo.groupsLoader</value></property>
+        <property name="description"><value>approved-task-list-repo.groupsLoader.description</value></property>
+        <property name="fixesFromSchema"><value>0</value></property>
+        <property name="fixesToSchema"><value>${version.schema}</value></property>
+        <property name="targetSchema"><value>100000</value></property>
+        <property name="importerBootstrap">
+            <ref bean="spacesBootstrap" />
+        </property>
+        <property name="bootstrapView">
+            <props>
+                <prop key="path">/${alfresco_user_store.system_container.childname}</prop>
+                <prop key="location">alfresco/module/${project.artifactId}/bootstrap/create-group.xml</prop>
+            </props>
+        </property>
+    </bean>	
+
+</beans>

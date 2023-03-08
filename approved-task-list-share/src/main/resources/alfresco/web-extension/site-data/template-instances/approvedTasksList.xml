@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<template-instance>
+	<template-type>es/keensoft/components/approvedTasksList/approvedTasksList</template-type>
+   	<components>
+		<component>
+			<region-id>toolbar</region-id>
+			<url>/components/profile/userprofile-toolbar</url>
+		</component>
+   	</components>
+</template-instance>

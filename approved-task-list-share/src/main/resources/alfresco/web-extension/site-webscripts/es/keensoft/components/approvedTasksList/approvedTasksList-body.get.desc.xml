@@ -1,0 +1,5 @@
+<webscript>
+    <shortname>approvedTasksListBody</shortname>
+    <description>Returns the body content for the approvedTasksList page.</description>
+    <url>/components/approvedTasksList/body</url>
+</webscript>

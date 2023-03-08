@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<page>
+   <title>Approved list tasks</title>
+   <title-id>page.approvedTasksList.title</title-id>
+   <description>Description</description>
+   <description-id>page.approvedTasksList.description</description-id>
+   <template-instance>approvedTasksList</template-instance>
+   <authentication>user</authentication>
+</page>

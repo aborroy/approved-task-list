@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- Get approved files list -->
+	<bean id="webscript.es.keensoft.webservices.get_approved_files_list.get"
+		class="es.keensoft.webservices.GetApprovedFilesList" parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry"/>
+		<property name="sysAdminParams" ref="sysAdminParams"/>
+	</bean>
+	
+	<!-- Get CSV of approved files -->
+	<bean id="webscript.es.keensoft.webservices.export_approved_files_to_csv.get"
+		class="es.keensoft.webservices.ExportApprovedFilesToCSV" parent="webscript">
+		<property name="serviceRegistry" ref="ServiceRegistry"/>
+		<property name="sysAdminParams" ref="sysAdminParams"/>
+	</bean>
+	
+</beans>
